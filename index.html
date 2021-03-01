@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Minha Página</title>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a href="#" class="navbar-brand text-uppercase">Consultar CEP</a>
+    <div class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Digite seu CEP" id="cep">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="consultaCep()">Buscar</button>
+    </div>
+  </nav>
+
+  <main class="container mt-2">
+    <div class="row">
+      <h3>CEP</h3>
+    </div>
+    <div class="row mt-2">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Logradouro</td>
+            <td id="logradouro"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Bairro</td>
+            <td id="bairro"></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Localidade</td>
+            <td id="localidade"></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>UF</td>
+            <td id="uf"></td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
