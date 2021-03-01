@@ -1,8 +1,9 @@
 let body = document.querySelector('body')
 let p = document.createElement('p')
-p.setAttribute('id','bairro')
+p.setAttribute('id', 'bairro')
 
 function consultaCep() {
+  $(".barra-progresso").show();
   let cep = document.querySelector('#cep').value
   $.ajax({
     url: `https://viacep.com.br/ws/${cep}/json/`,
@@ -13,6 +14,9 @@ function consultaCep() {
       $("#bairro").html(response.bairro)
       $("#localidade").html(response.localidade)
       $("#uf").html(response.uf)
+      $("#tituloCep").html("CEP: " + response.cep)
+      $(".cep").show();
+      $(".barra-progresso").hide();
       // $("#logradouro").html(response.logradouro);
       // let logradouro = document.querySelector('#logradouro').innerHTML=response.logradouro
       // p.innerHTML=response.bairro
@@ -21,5 +25,9 @@ function consultaCep() {
     }
   })
 }
-body.insertBefore(p,logradouro)
+// body.insertBefore(p, logradouro)
 // body.insertBefore(p,logradouro.nextElementSibling)
+$(function () {
+  $(".cep").hide();
+  $(".barra-progresso").hide();
+})
